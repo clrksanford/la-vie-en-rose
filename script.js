@@ -1,16 +1,19 @@
+// Image selector function
+
 $(document).ready(function() {
   $('img').click(function() {
     var source = $(this).attr('src');
-    console.log(source);
+    $('h2').css('visibility','hidden');
     $('.jumbotron').css('background-image','url(' + source + ')');
   });
 });
+
+// Color filter selector function
 
 function colorSelect () {
   var userColor = $('#color-picker :selected').text();
   if (userColor === "rose") {
     $('.filter').css('background-color', 'rgba(244,0,0,0.3)');
-    console.log(userColor);
   } else if (userColor === "bleu") {
     $('.filter').css('background-color', 'rgba(0,0,244,0.3)');
   } else if (userColor === "vert") {
@@ -22,4 +25,17 @@ $(document).ready(function() {
     $('#color-picker').change(function() {
       colorSelect();
     });
+});
+
+// Reset function
+
+$(document).ready(function() {
+  $('button').click(function() {
+    $('.jumbotron').css('background', "url('images/edith2.jpg')");
+    $('.jumbotron').css('background-position','center');
+    $('.jumbotron').css('background-size','cover');
+    $('.filter').css('background-color','rgba(255,255,255,0)');
+    $('h2').css('visibility','visible');
+    $('select').prop('selectedIndex',0);
+  });
 });
