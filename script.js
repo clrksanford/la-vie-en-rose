@@ -1,13 +1,31 @@
+$(document).ready(function() {
+  //When image is clicked at bottom, it appears in jumbotron
+  $('img').on('click', imageSelector);
+
+  //When color selected from dropdown, apply filter over jumbotron
+  $('#color-picker').change(function() {
+    colorSelect();
+  });
+
+  //When random button clicked, apply random filter color
+  $('.random').click(function() {
+
+    var color = colorRandomizer();
+
+    $('.filter').css('background-color', color);
+  });
+
+  //When reset button is clicked, page resets
+  $('.reset').on('click', reset);
+});
+
 // Image selector function
 
-$(document).ready(function() {
-  $('img').click(function() {
-    var source = $(this).attr('src');
-    $('h2').css('visibility','hidden');
-    $('.jumbotron').css('background-image','url(' + source + ')');
-    // $('select').prop('selectedIndex',0);
-  });
-});
+function imageSelector (event) {
+  var source = $(this).attr('src');
+  $('h2').css('visibility','hidden');
+  $('.jumbotron').css('background-image','url(' + source + ')');
+}
 
 // Color filter selector function
 
@@ -28,24 +46,16 @@ function colorSelect () {
   }
 }
 
-$(document).ready(function() {
-    $('#color-picker').change(function() {
-      colorSelect();
-    });
-});
-
 // Reset function
 
-$(document).ready(function() {
-  $('.reset').click(function() {
-    $('.jumbotron').css('background', "url('images/edith2.jpg')");
-    $('.jumbotron').css('background-position','center');
-    $('.jumbotron').css('background-size','cover');
-    $('.filter').css('background-color','rgba(255,255,255,0)');
-    $('h2').css('visibility','visible');
-    $('select').prop('selectedIndex',0);
-  });
-});
+function reset() {
+  $('.jumbotron').css('background', "url('images/edith2.jpg')");
+  $('.jumbotron').css('background-position','center');
+  $('.jumbotron').css('background-size','cover');
+  $('.filter').css('background-color','rgba(255,255,255,0)');
+  $('h2').css('visibility','visible');
+  $('select').prop('selectedIndex',0);
+}
 
 //Color randomizer
 function colorRandomizer () {
@@ -57,14 +67,3 @@ function colorRandomizer () {
 
   return color;
 }
-
-$(document).ready(function() {
-  $('.random').click(function() {
-
-    var color = colorRandomizer();
-
-    $('.filter').css('background-color', color);
-    // $('header').css('background-color', 'rgba(0,244,0,0.2)');
-    // $('.image-selector').css('background-color', 'rgba(0,244,0,0.2)');
-  });
-});
