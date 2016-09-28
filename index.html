@@ -1,8 +1,16 @@
 <!DOCTYPE html>
+<!-- Next steps:
+      1) Add custom color selector
+      2) Add option to upload custom Image
+      3) Add option to animate/loop through colors on default image when screen loads
+      4) Add coloring and fonts to page/finish CSS styling
+      5) Add arrows at sides of jumbotron to scroll through images
+ -->
 <html>
   <head>
     <meta charset="utf-8">
     <title>La Vie En...</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
@@ -10,7 +18,7 @@
     <header class="container-fluid">
       <div class="row">
         <div class="col-md-5">
-          <h1>La Vie En ...</h1>
+          <h1><em>La Vie En ...</em></h1>
         </div>
         <div class="form-group col-md-5">
           <select name="color" class="form-control" id="color-picker">
@@ -18,6 +26,7 @@
             <option value="rose" id="rose">rose</option>
             <option value="bleu">bleu</option>
             <option value="vert">vert</option>
+            <option value="custom">custom</option>
           </select>
         </div>
         <div class="col-md-2 button-container">
@@ -34,27 +43,27 @@
         </div>
       </div>
     </section>
-    <section class="container image-selector">
+    <section class="container-fluid image-selector">
       <div class="row">
         <h3 class="col-md-2">Choose an image:</h3>
         <div class="col-md-2">
-          <img src="images/istanbul.jpg" alt="Istanbul" id="istanbul">
+          <img src="images/istanbul.jpg" alt="Istanbul" class="img-thumbnail">
         </div>
         <div class="col-md-2">
-          <img src="images/paris.jpg" alt="Paris">
+          <img src="images/paris.jpg" alt="Paris" class="img-thumbnail">
         </div>
         <div class="col-md-2">
-          <img src="images/atlanta.jpg" alt="Atlanta">
+          <img src="images/atlanta.jpg" alt="Atlanta" class="img-thumbnail">
         </div>
         <div class="col-md-2">
-          <img src="images/torla.jpg" alt="Torla">
+          <img src="images/torla.jpg" alt="Torla" class="img-thumbnail">
         </div>
         <div class="col-md-2">
-          <img src="images/marrakech.jpg" alt="Marrakech">
+          <img src="images/marrakech.jpg" alt="Marrakech" class="img-thumbnail">
         </div>
       </div>
     </section>
-    <footer>Copyright 2016 CNS Productions</footer>
+    <footer class ="container-fluid">Copyright 2016 CNS Productions</footer>
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src="script.js" charset="utf-8"></script>
   </body>
