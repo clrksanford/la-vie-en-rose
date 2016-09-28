@@ -70,6 +70,14 @@ div {
 }
 */
 
+header {
+  background-color: #ffb3b3;
+}
+
+h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
 select {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -99,10 +107,16 @@ button {
 .filter {
   width: 100%;
   height: 100%;
+  background-color: rgba(244,0,0,0.3);
 }
 
 h2 {
 
+}
+
+.image-selector {
+  background-color: #ff8080;
+  color: white;
 }
 
 h3 {
@@ -113,8 +127,11 @@ img {
   width: 90%;
   height: auto;
   cursor: pointer;
+  filter: grayscale();
 }
 
 footer {
   text-align: center;
+  background-color: black;
+  color: white;
 }
