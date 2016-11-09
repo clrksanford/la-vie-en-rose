@@ -1,0 +1,265 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------------*/
+/*----Begin custom code----*/
+/*-------------------------*/
+
+/*------------------------------*/
+/*----GLOBAL/REUSABLE STYLES----*/
+/*------------------------------*/
+html, body {
+  height: 100%;
+}
+
+.flexContainer {
+  display: flex;
+  height: 100%;
+}
+
+.centerAlign {
+  justify-content: center;
+  align-items: center;
+}
+
+.spaceAround {
+  justify-content: center;
+  align-items: center;
+}
+
+/*---------------------*/
+/*----HEADER STYLES----*/
+/*---------------------*/
+
+header {
+  background-color: rgb(140,140,140);
+  height: 10%;
+  width: 100%;
+}
+
+div#h1Container {
+  display: inline-block;
+  height: 100%;
+  width: 44%;
+}
+
+div#h1Inner {
+  height: 100%;
+  width: 95%;
+}
+
+h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 30px;
+  color: white;
+}
+
+nav {
+  display: inline-block;
+  height: 100%;
+  width: 55%;
+}
+
+div#navInner {
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background-color: rgb(140,140,140);
+  font-size: 16px;
+  color: white;
+  border: 1px solid white;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(200,200,200);
+  cursor: pointer;
+}
+
+/*---------------------*/
+/*-----MAIN STYLES-----*/
+/*---------------------*/
+
+main {
+  background: url('../images/edith2.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 70%;
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244,0,0,0.3);
+}
+
+/*-----------------------------*/
+/*----IMAGE-SELECTOR STYLES----*/
+/*-----------------------------*/
+
+section#imageSelector {
+  background-color: white;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+}
+
+div#h3Container {
+  display: flex;
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+}
+
+div#imageContainer {
+  display: flex;
+  width: 74%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div#imageContainer img {
+  width: 15%;
+  height: auto;
+}
+
+/*---------CODE GRAVEYARD----------*/
+/*--(THINGS THAT WEREN'T WORKING)--*/
+
+/*header {
+  background-color: #ccc;
+  height: 50px;
+  width: 100%;
+}
+
+div#h1Container {
+  display: inline-block;
+  width: 40%;
+}
+
+h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+  color: white;
+}
+
+nav {
+  display: inline-block;
+  width: 58%;
+}
+
+button {
+  background-color: rgb(140,140,140);
+  color: white;
+  border: none;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(200,200,200);
+}
+
+.image-selector {
+  padding: 20px 0;
+}
+
+.jumbotron {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  background: url('images/edith2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244,0,0,0.3);
+}
+
+h2 {
+
+}
+
+.image-selector {
+  background-color: gray;
+  color: white;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+img {
+  width: 10%;
+  height: auto;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+}*/
